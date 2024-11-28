@@ -2,7 +2,7 @@ import sqlite3
 from datetime import datetime
 
 import click
-from flask import current_app, g # g é uma variavel tem tudo que está registrado globalmente, se um avariavel nome é clriada 
+from flask import current_app, g # g é uma variavel tem tudo que está registrado globalmente, se um avariavel nome é criada 
 # e atribida ao "g" então ela pode ser acesada tanto por db.py quanto por app.py
 
 def get_db():

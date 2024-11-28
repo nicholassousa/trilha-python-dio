@@ -17,3 +17,6 @@ def requires_role(role_name):
         return wrapped
     
     return decorator
+
+def eleva_quadrado(x):
+    return x**2

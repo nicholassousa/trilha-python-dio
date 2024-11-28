@@ -11,6 +11,16 @@ flask = "*"
 flask-sqlalchemy = "*"
 flask-migrate = "*"
 flask-jwt-extended = "*"
+pytest = "*"
+pytest-mock = "*"
+flake8 = "^7.1.1"
+
+
+
+[tool.pytest.ini_options]
+addopts = "-ra -vvv"
+testpaths = ["tests"]
+pythonpath = ["src"]
 
 
 [build-system]
