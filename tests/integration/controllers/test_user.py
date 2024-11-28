@@ -28,7 +28,6 @@ def test_get_user_fail(client):
     user_id = 4 # modei para 4 pq já tinhamos usuarios com id 1 e 2
 
     # When
-
     response = client.get(f"/users/{user_id}")
 
     # Then

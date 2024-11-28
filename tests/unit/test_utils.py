@@ -38,7 +38,6 @@ def test_requile_role_success(mocker):
     # Then
     assert result == "success"
 
-
 def test_requile_role_fail(mocker):
     # Given
     mock_user = mocker.Mock()
