@@ -46,11 +46,14 @@ def _list_users():
 @jwt_required()
 @requires_role("admin")
 def list_or_create_user():
-    if request.method == 'POST':
-        _create_user()
-        return {'message': 'User Created!'}, HTTPStatus.CREATED
-    else:
-        return {"message": _list_users()}, HTTPStatus.OK
+    try:
+        if request.method == 'POST':
+            _create_user()
+            return {'message': 'User Created!'}, HTTPStatus.CREATED
+        else:
+            return {"users": _list_users()}, HTTPStatus.OK
+    except Exception as e:
+        return {"error": str(e)}, HTTPStatus.UNPROCESSABLE_ENTITY
 
 
     

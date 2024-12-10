@@ -12,4 +12,4 @@ def create_role():
         role = Role(name=data['name'])
         db.session.add(role)
         db.session.commit()
-        return {'massege': 'role Created!'}, HTTPStatus.CREATED # 201 é o estatus para created ok , ous seja, o estatus para dizer que deu certo
+        return {'messege': 'role Created!'}, HTTPStatus.CREATED # 201 é o estatus para created ok , ous seja, o estatus para dizer que deu certo
